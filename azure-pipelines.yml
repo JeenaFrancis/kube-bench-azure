@@ -26,7 +26,9 @@ steps:
   inputs:
     script: |
       kubectl apply -f job.yaml
+      kubectl describe pod kube-bench
       minikube kubectl -- get pods -A
+      kubectl  get pods
 
 
 
