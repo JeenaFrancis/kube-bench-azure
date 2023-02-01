@@ -22,10 +22,11 @@ steps:
     minikube start --force
     minikube kubectl -- get pods -A
   displayName: 'Start minikube'
-- task: CmdLine@2
-  inputs:
-      script: 'kubectl get pods'
+
 - task: CmdLine@2
   inputs:
           script: 'kubectl apply -f job.yaml'
+- task: CmdLine@2
+  inputs:
+      script: 'kubectl get pods'
 
